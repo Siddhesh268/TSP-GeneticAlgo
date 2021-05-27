@@ -27,7 +27,7 @@ $(function() {
   initData();
   points = data200;
   $('#addRandom_btn').click(function() {
-    addRandomPoints(50);
+    addRandomPoints(10);
     $('#status').text("");
     running = false;
   });
