@@ -10,24 +10,6 @@ function GANextGeneration() {
   selection();
   crossover();
   mutation();
-
-  //if(UNCHANGED_GENS > POPULATION_SIZE + ~~(points.length/10)) {
-    //MUTATION_PROBABILITY = 0.05;
-    //if(doPreciseMutate) {
-    //  best = preciseMutate(best);
-    //  best = preciseMutate1(best);
-    //  if(evaluate(best) < bestValue) {
-    //    bestValue = evaluate(best);
-    //    UNCHANGED_GENS = 0;
-    //    doPreciseMutate = true;
-    //  } else {
-    //    doPreciseMutate = false;
-    //  }
-    //}
-  //} else {
-    //doPreciseMutate = 1;
-    //MUTATION_PROBABILITY = 0.01;
-  //}
   setBestValue();
 }
 function tribulate() {
@@ -63,25 +45,7 @@ function crossover() {
     //oxCrossover(queue[i], queue[i+1]);
   }
 }
-//function oxCrossover(x, y) {	
-//  //var px = population[x].roll();
-//  //var py = population[y].roll();
-//  var px = population[x].slice(0);
-//  var py = population[y].slice(0);
 
-//  var rand = randomNumber(points.length-1) + 1;
-//  var pre_x = px.slice(0, rand);
-//  var pre_y = py.slice(0, rand);
-
-//  var tail_x = px.slice(rand, px.length);
-//  var tail_y = py.slice(rand, py.length);
-
-//  px = tail_x.concat(pre_x);
-//  py = tail_y.concat(pre_y);
-
-//  population[x] = pre_y.concat(px.reject(pre_y));
-//  population[y] = pre_x.concat(py.reject(pre_x));
-//}
 function doCrossover(x, y) {
   child1 = getChild('next', x, y);
   child2 = getChild('previous', x, y);
